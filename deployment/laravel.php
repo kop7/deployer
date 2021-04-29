@@ -10,7 +10,7 @@
 
 namespace Deployer;
 
-require_once __DIR__ . '/common.php';
+require_once __DIR__ . '../vendor/deployer/deployer/recipe/common.php';
 
 // Laravel shared dirs
 set('shared_dirs', [
