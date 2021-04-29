@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a778db2-3194-440c-8c12-ab0975de03e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/deploy_tut.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploy_tut.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deploy.php" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +22,20 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="staging" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="7574ee7f-a673-4b40-8f19-d78220feabc2" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="staging" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="kop7" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="deployer" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -236,51 +245,35 @@
       <workItem from="1619602944901" duration="474000" />
       <workItem from="1619695092338" duration="362000" />
     </task>
+    <task id="LOCAL-00001" summary="wip">
+      <created>1619696228264</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1619696228264</updated>
+    </task>
+    <task id="LOCAL-00002" summary="wip">
+      <created>1619696381290</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619696381290</updated>
+    </task>
+    <task id="LOCAL-00003" summary="wip">
+      <created>1619696736717</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1619696736717</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="530" y="196" key="#User.js" timestamp="1585224881367">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="530" y="196" key="#User.js/0.0.1680.1050@0.0.1680.1050" timestamp="1585224881367" />
-    <state x="530" y="196" key="#User.js_(1)" timestamp="1585225033269">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="530" y="196" key="#User.js_(1)/0.0.1680.1050@0.0.1680.1050" timestamp="1585225033269" />
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1585225046661">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585225046661" />
-    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1585225046658">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585225046658" />
-    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1585225046653">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585225046653" />
-    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1585225046660">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585225046660" />
-    <state x="659" y="455" key="NewPhpFileDialog" timestamp="1585232309023">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="659" y="455" key="NewPhpFileDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585232309023" />
-    <state x="341" y="164" key="SettingsEditor" timestamp="1585216377592">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1585216377592" />
-    <state x="517" y="357" key="com.intellij.ide.util.TipDialog" timestamp="1585216205837">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="517" y="357" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585216205837" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1585232729435">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585232729435" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="wip" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip" />
   </component>
 </project>
