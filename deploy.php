@@ -49,7 +49,7 @@ host('staging.myapp.io') // Name of the server
 ->hostname('5.189.130.105') // Hostname or IP address
 ->stage('staging') // Deployment stage (production, staging, etc)
 ->user('root') // SSH user
-->set('deploy_path', '/var/www/vhosts/notus.dev/laravel-deployer.notus.dev'); // Deploy path
+->set('deploy_path', '/var/www/vhosts/notus.dev/laravel-deployer-test.notus.dev'); // Deploy path
 
 after('deploy:failed', 'deploy:unlock'); // Unlock after failed deploy
 
