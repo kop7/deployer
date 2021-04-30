@@ -7,9 +7,7 @@ require 'deployment/slack.php';
 require 'recipe/laravel.php';
 require 'recipe/rsync.php';
 
-
-
-set('slack_webhook', 'https://hooks.slack.com/services/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');
+set('slack_webhook', 'https://hooks.slack.com/services/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');
 
 set('application', 'My App');
 set('ssh_multiplexing', true); // Speeds up deployments

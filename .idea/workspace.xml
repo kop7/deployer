@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a778db2-3194-440c-8c12-ab0975de03e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/push_workflow.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/push_workflow.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deploy_tut.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploy_tut.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deploy.php" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deployment/slack.php" beforeDir="false" afterPath="$PROJECT_DIR$/deployment/slack.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -431,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619776996289</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="wip122">
+      <created>1619786344931</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1619786344931</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
