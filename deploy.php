@@ -9,6 +9,12 @@ require 'recipe/slack.php';
 
 
 set('slack_webhook', 'https://hooks.slack.com/services/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');
+set('slack_text', '_{{user}}_ deploying `{{branch}}` to *{{target}}*');
+set('slack_success_text', 'Deploy to *{{target}}* successful');
+set('slack_failure_text', 'Deploy to *{{target}}* failed');
+
+
+
 set('application', 'My App');
 set('ssh_multiplexing', true); // Speeds up deployments
 
@@ -56,8 +62,9 @@ host('laravel-deployer.notus.dev') // Name of the server
 after('deploy:failed', 'deploy:unlock'); // Unlock after failed deploy
 
 desc('Deploy the application');
+before('deploy', 'slack:notify');
+
 task('deploy', [
-    'slack:notify',
     'deploy:info',
     'deploy:prepare',
     'deploy:lock',
@@ -77,5 +84,5 @@ task('deploy', [
     'deploy:unlock',
     'cleanup',
 ]);
-
 after('success', 'slack:notify:success');
+
