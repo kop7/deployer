@@ -45,6 +45,7 @@ host('myapp.io') // Name of the server
 ->user('root') // SSH user
 ->set('deploy_path', '/var/www/my-app'); // Deploy path
 
+
 // Staging Server
 host('laravel-deployer.notus.dev') // Name of the server
 ->hostname('5.189.130.105') // Hostname or IP address
