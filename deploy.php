@@ -9,8 +9,6 @@ require 'recipe/slack.php';
 
 
 set('slack_webhook', 'https://hooks.slack.com/services/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');
-before('deploy', 'slack:notify');
-
 set('application', 'My App');
 set('ssh_multiplexing', true); // Speeds up deployments
 
@@ -32,7 +30,7 @@ add('rsync', [
     ],
 ]);
 
-
+before('deploy', 'slack:notify');
 // Set up a deployer task to copy secrets to the server.
 // Since our secrets are stored in Gitlab, we can access them as env vars.
 task('deploy:secrets', function () {
@@ -48,7 +46,7 @@ host('myapp.io') // Name of the server
 ->set('deploy_path', '/var/www/my-app'); // Deploy path
 
 // Staging Server
-host('staging.myapp.io') // Name of the server
+host('laravel-deployer.notus.dev') // Name of the server
 ->hostname('5.189.130.105') // Hostname or IP address
 ->stage('staging') // Deployment stage (production, staging, etc)
 ->user('root') // SSH user
