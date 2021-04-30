@@ -8,12 +8,8 @@ require 'recipe/rsync.php';
 require 'recipe/slack.php';
 
 
-set('slack_webhook', 'https://hooks.slack.com/services/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');
-set('slack_text', '_{{user}}_ deploying `{{branch}}` to *{{target}}*');
-set('slack_success_text', 'Deploy to *{{target}}* successful');
-set('slack_failure_text', 'Deploy to *{{target}}* failed');
+set('slack_webhook', 'https://hooks.slack.com/services/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');
 before('deploy', 'slack:notify');
-after('success', 'slack:notify:success');
 
 set('application', 'My App');
 set('ssh_multiplexing', true); // Speeds up deployments
@@ -44,6 +40,10 @@ task('deploy:secrets', function () {
     upload('.env', get('deploy_path') . '/shared');
 });
 
+task('deploy:test', function() {
+    run('/var/www/vhosts/notus.dev/laravel-deployer-test.notus.dev ls -la');
+});
+
 // Production Server
 host('myapp.io') // Name of the server
 ->hostname('104.248.172.220') // Hostname or IP address
@@ -65,6 +65,7 @@ desc('Deploy the application');
 
 task('deploy', [
     'deploy:info',
+    'deploy:test',
     'deploy:prepare',
     'deploy:lock',
     'deploy:release',
@@ -84,3 +85,4 @@ task('deploy', [
     'cleanup',
 ]);
 
+after('success', 'slack:notify:success');
