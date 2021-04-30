@@ -42,13 +42,18 @@ task('deploy:secrets', function () {
     upload('.env', get('deploy_path') . '/shared');
 });
 
+task('test:ls', function () {
+     run('/var/www/vhosts/notus.dev/laravel-deployer-test.notus.dev ls -ls');
+});
+
+/*
 // Production Server
 host('myapp.io') // Name of the server
 ->hostname('104.248.172.220') // Hostname or IP address
 ->stage('production') // Deployment stage (production, staging, etc)
 ->user('root') // SSH user
 ->set('deploy_path', '/var/www/my-app'); // Deploy path
-
+*/
 
 // Staging Server
 host('laravel-deployer.notus.dev') // Name of the server
@@ -63,8 +68,8 @@ desc('Deploy the application');
 before('deploy', 'slack:notify');
 
 task('deploy', [
-    'slack:notify',
     'deploy:info',
+    'test:ls',
     'deploy:prepare',
     'deploy:lock',
     'deploy:release',
@@ -82,6 +87,6 @@ task('deploy', [
     'deploy:symlink',
     'deploy:unlock',
     'cleanup',
-    'slack:notify:success'
 ]);
+after('success', 'slack:notify:success');
 
