@@ -454,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619788715483</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="wip122-111">
+      <created>1619789888108</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1619789888108</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,6 +484,7 @@
     <MESSAGE value="wip122" />
     <MESSAGE value="wip122-1" />
     <MESSAGE value="wip122-11" />
-    <option name="LAST_COMMIT_MESSAGE" value="wip122-11" />
+    <MESSAGE value="wip122-111" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip122-111" />
   </component>
 </project>

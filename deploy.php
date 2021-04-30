@@ -12,6 +12,7 @@ set('slack_webhook', 'https://hooks.slack.com/services/T60USMVCY/B0218MDP8HE/CxD
 set('application', 'My App');
 set('ssh_multiplexing', true); // Speeds up deployments
 set('writable_mode', 'chown');
+set('http_user', 'notus:psaserv');
 
 set('rsync_src', function () {
     return __DIR__; // If your project isn't in the root, you'll need to change this.
