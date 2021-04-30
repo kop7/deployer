@@ -76,7 +76,6 @@ after('success', 'slack:notify:success');
 
 task('deploy', [
     'deploy:info',
-    'deploy:test',
     'deploy:prepare',
     'deploy:lock',
     'deploy:release',
