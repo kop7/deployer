@@ -41,7 +41,7 @@ task('deploy:secrets', function () {
 });
 
 task('deploy:test', function() {
-    run('/var/www/vhosts/notus.dev/laravel-deployer-test.notus.dev ls -la');
+    run('ls -la');
 });
 
 // Production Server
