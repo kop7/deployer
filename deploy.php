@@ -9,7 +9,11 @@ require 'recipe/slack.php';
 
 
 set('slack_webhook', 'https://hooks.slack.com/services/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');
-before('deploy', 'slack:notify');
+set('slack_text', '_{{user}}_ deploying `{{branch}}` to *{{target}}*');
+set('slack_success_text', 'Deploy to *{{target}}* successful');
+set('slack_failure_text', 'Deploy to *{{target}}* failed');
+
+
 
 set('application', 'My App');
 set('ssh_multiplexing', true); // Speeds up deployments
@@ -47,8 +51,9 @@ host('myapp.io') // Name of the server
 ->user('root') // SSH user
 ->set('deploy_path', '/var/www/my-app'); // Deploy path
 
+
 // Staging Server
-host(['laravel-deployer-test.notus.dev']) // Name of the server
+host('laravel-deployer.notus.dev') // Name of the server
 ->hostname('5.189.130.105') // Hostname or IP address
 ->stage('staging') // Deployment stage (production, staging, etc)
 ->user('root') // SSH user
@@ -57,6 +62,7 @@ host(['laravel-deployer-test.notus.dev']) // Name of the server
 after('deploy:failed', 'deploy:unlock'); // Unlock after failed deploy
 
 desc('Deploy the application');
+before('deploy', 'slack:notify');
 
 task('deploy', [
     'deploy:info',
@@ -71,10 +77,12 @@ task('deploy', [
     'artisan:storage:link', // |
     'artisan:view:cache',   // |
     'artisan:config:cache', // | Laravel Specific steps
-    'artisan:optimize',     // |
+    //'artisan:optimize',     // |
     'artisan:migrate',      // |
     'artisan:queue:restart',// |
     'deploy:symlink',
     'deploy:unlock',
     'cleanup',
 ]);
+after('success', 'slack:notify:success');
+
