@@ -3,13 +3,13 @@
 namespace Deployer;
 
 // Include the Laravel & rsync recipes
+require 'deployment/slack.php';
 require 'recipe/laravel.php';
 require 'recipe/rsync.php';
-require 'deployment/slack.php';
 
 
-set('slack_webhook', 'https://hooks.slack.com/services/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');
-before('deploy', 'slack:notify');
+
+set('slack_webhook', 'https://hooks.slack.com/services/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');
 
 set('application', 'My App');
 set('ssh_multiplexing', true); // Speeds up deployments
@@ -32,6 +32,18 @@ add('rsync', [
     ],
 ]);
 
+add('writable_dirs', [
+    'bootstrap/cache',
+    'storage',
+    'storage/app',
+    'storage/app/public',
+    'storage/framework',
+    'storage/framework/cache',
+    'storage/framework/sessions',
+    'storage/framework/views',
+    'storage/logs',
+    'bootstrap/cache',
+]);
 // Set up a deployer task to copy secrets to the server.
 // Since our secrets are stored in Gitlab, we can access them as env vars.
 task('deploy:secrets', function () {
@@ -62,6 +74,11 @@ after('deploy:failed', 'deploy:unlock'); // Unlock after failed deploy
 
 desc('Deploy the application');
 
+desc('Slack');
+before('deploy', 'slack:notify');
+after('deploy', 'success');
+after('success', 'slack:notify:success');
+
 task('deploy', [
     'deploy:info',
     'deploy:test',
@@ -84,4 +101,3 @@ task('deploy', [
     'cleanup',
 ]);
 
-after('success', 'slack:notify:success');
