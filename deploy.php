@@ -30,7 +30,7 @@ add('rsync', [
     ],
 ]);
 
-before('deploy', 'slack:notify');
+
 // Set up a deployer task to copy secrets to the server.
 // Since our secrets are stored in Gitlab, we can access them as env vars.
 task('deploy:secrets', function () {
@@ -56,8 +56,8 @@ host('laravel-deployer.notus.dev') // Name of the server
 after('deploy:failed', 'deploy:unlock'); // Unlock after failed deploy
 
 desc('Deploy the application');
-
 task('deploy', [
+    'slack:notify',
     'deploy:info',
     'deploy:prepare',
     'deploy:lock',
