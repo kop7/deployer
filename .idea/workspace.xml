@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a778db2-3194-440c-8c12-ab0975de03e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/deployment/laravel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deployment/rsync.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deployment/slack.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deploy.php" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deployment/laravel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/deployment/rsync.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/deployment/slack.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="staging" />
+        <entry key="$PROJECT_DIR$" value="test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -252,6 +252,7 @@
       <workItem from="1619602944901" duration="474000" />
       <workItem from="1619695092338" duration="362000" />
       <workItem from="1619703140912" duration="3503000" />
+      <workItem from="1619765027290" duration="387000" />
     </task>
     <task id="LOCAL-00001" summary="wip">
       <created>1619696228264</created>
@@ -316,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619705171518</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="wip">
+      <created>1619707636534</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1619707636534</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

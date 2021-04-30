@@ -3,11 +3,14 @@
 namespace Deployer;
 
 // Include the Laravel & rsync recipes
-require 'deployment/laravel.php';
-require 'deployment/rsync.php';
-require 'deployment/slack.php';
+require 'recipe/laravel.php';
+require 'recipe/rsync.php';
+require 'recipe/slack.php';
 
+
+set('slack_webhook', 'https://hooks.slack.com/services/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');
 before('deploy', 'slack:notify');
+
 set('application', 'My App');
 set('ssh_multiplexing', true); // Speeds up deployments
 
