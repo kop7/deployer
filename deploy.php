@@ -7,7 +7,7 @@ require 'deployment/slack.php';
 require 'recipe/laravel.php';
 require 'recipe/rsync.php';
 
-set('slack_webhook', 'https://hooks.slack.com/services/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');
+set('slack_webhook', getenv('SLACK_WEBHOOK'));
 
 
 set('application', 'My App');
