@@ -5,7 +5,7 @@ namespace Deployer;
 // Include the Laravel & rsync recipes
 require 'recipe/laravel.php';
 require 'recipe/rsync.php';
-require 'recipe/slack.php';
+require 'deployment/slack.php';
 
 
 set('slack_webhook', 'https://hooks.slack.com/services/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');
@@ -31,7 +31,6 @@ add('rsync', [
         'deploy.php',
     ],
 ]);
-
 
 // Set up a deployer task to copy secrets to the server.
 // Since our secrets are stored in Gitlab, we can access them as env vars.
